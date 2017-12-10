@@ -9,10 +9,15 @@ Created on Tue Dec  5 11:51:28 2017
 import string
 import random
 
-def password(dlugosc,chars=string.ascii_letters+string.ascii_lowercase+string.punctuation+string.digits):
-    return "".join(random.choice(chars) for _ in range(dlugosc))
+def password(length,chars=string.ascii_letters+string.ascii_lowercase+string.punctuation+string.digits):
+#By command join we can join each string chars. 
+#In this situation we join without any letter or space, if we change to "*", we receive string1*string2*string3 
+#We can use "_" just as any other sign 
+    return "".join(random.choice(chars) for _ in range(length))
 
 
-dlugosc=int(input("Jak dlugie ma byc twoje haslo? 8 znaków? 9? 10?: "))
+length=int(input("How many sign should your password have? 8 signs? 9? 10?: "))
 
-print(password(dlugosc))
+print(password(length))
+
+    
