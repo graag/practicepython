@@ -1,17 +1,28 @@
 #ex9_praticepython
+#Excercise 9 - zadanie dodatkowe #4
 
 import random
-pytanko=int(input("Wprowadz liczbe od 1 do 9: "))
-losowanie=random.randint(1,9)
-roznica=abs(losowanie-pytanko)
-if roznica==0:
-    print("Gorąco, wygrales!")
-elif (roznica>0 and roznica<=2):
-    print("Ciepło")
-elif (roznica>2 and roznica<=4):
-    print("Chłodno")
-elif (roznica>4 and roznica<=6):
-    print("Zimno")
-else:
-    print("Lodowiec, przegrales, sprobuj jeszcze raz")
-    
+in_game=True
+ask = None
+score=0
+while in_game:
+    ask=input("Type number from 0 to 9. If you want exit type: exit  ")
+    score+=1
+    if ask != 'exit':
+        ask = int(ask) 
+    else:
+        in_game = False
+    if in_game:
+        lottery=random.randint(1,9)
+        difference=abs(lottery-ask)
+        if difference==0:
+            print("Hot, You won!")
+        elif (difference>0 and difference<=2):
+            print("Hotter")
+        elif (difference>2 and difference<=4):
+            print("Cool")
+        elif (difference>4 and difference<=6):
+            print("Cooler")
+        else:
+            print("Too cold, You failed. Try again")
+print("Number of attempts: ",score)        

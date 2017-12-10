@@ -1,9 +1,22 @@
 #ex2 praticepython.org
+#Excercice 2 - zadanie dodatkowe
 
-ask_liczba=int(input("Proszę, podaj liczbę: "))
-if ask_liczba%2==0:
-    print("Podales liczbe parzysta")
-    if ask_liczba%4==0:
-        print("oraz liczbe podzielna przez 4")
+
+
+notok=True
+while notok:
+    try:
+        ask_number=int(input("Please,type number: "))
+        notok=False
+    except ValueError:
+        print("I didn't type any number. Try again")
+        
+
+if ask_number%2==0:
+    print("You typed even number")
+    if ask_number%4==0:
+        print("and number is divided by 4")
 else:
-    print("Podales liczbe nieparzysta")
+        print("This number is odd")
+
+#I used while loop and try and except command
