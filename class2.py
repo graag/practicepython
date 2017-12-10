@@ -30,26 +30,26 @@ print(w2)
 print(w1.__add__(w2))
 #lub
 print(w1+w2)
-#class Prostokat:
-#    def __init__(self,x,y):
-#        self.a=x
-#        self.b=y
-#    def pole(self):
-#        "zwraca dlugosc wektora"
-#        return self.a * self.b
-#
-#class Kwadrat(Prostokat):
-#    def __init__(self,x):
-#        self.a=x
-#        self.b=x
-#
-#pole1=Prostokat(3,3).pole()
-#pole2=Kwadrat(3).pole()
-#print(pole1,pole2)
-#
-#
-#class Prostokat2(Prostokat):
-#    def obwod(self):
-#        return 2*self.a+2*self.b
-#obwod_prostokata=Prostokat2(3,4).obwod()
-#print(obwod_prostokata)
+class Prostokat:
+    def __init__(self,x,y):
+        self.a=x
+        self.b=y
+    def pole(self):
+        "zwraca dlugosc wektora"
+        return self.a * self.b
+
+class Kwadrat(Prostokat):
+    def __init__(self,x):
+        self.a=x
+        self.b=x
+
+pole1=Prostokat(3,3).pole()
+pole2=Kwadrat(3).pole()
+print(pole1,pole2)
+
+
+class Prostokat2(Prostokat):
+    def obwod(self):
+        return 2*self.a+2*self.b
+obwod_prostokata=Prostokat2(3,4).obwod()
+print(obwod_prostokata)

@@ -1,7 +1,14 @@
 #ex6 praticepython.org
-wyraz=str(input("Prosze, podaj jeden wyraz: "))
-zaryw=wyraz[::-1]
-if wyraz==zaryw:
-    print("to jest palindrom")
+word=str(input("Please, put one word: "))
+drow=word[::-1]
+#drow=word[::-1]
+
+#if I changed drow=word[::-2], we received reversed word with every second element,
+#e.g. We typed word: warsaw , We received: wsa
+print(drow)
+
+
+if word==drow:
+    print("This is Palindrom")
 else:
-    print("to nie jest palindrom")
+    print("This isn't Palindrom")
