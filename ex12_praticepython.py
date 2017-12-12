@@ -4,5 +4,5 @@
 #import random
 a=[5,10,15,20,25]
 for i in a:
-    b=[a[0],a[len(a)-1]]
+    b=[a[0],a[-1]]
 print(b)

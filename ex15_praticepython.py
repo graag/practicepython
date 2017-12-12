@@ -1,12 +1,10 @@
 #ex15
-def powiedz(n):
+def word(n):
     
-    #dziele
     y=n.split()
-    #odwracam
     y.reverse()
-    # zwracam polaczone
     return " ".join(y)
-zadanie=str(input("Napisz prosze dlugie zdanie: "))
-     #wywoluje funkcje
-m=powiedz(zadanie)    
+sentence=str(input("Please, put long sentence: "))
+     #call the function
+result=word(sentence)    
+print(result)
