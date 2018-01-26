@@ -21,13 +21,13 @@ Dopisz wczytywanie tablicy z pliku json"""
 
 import argparse
 def Main():
-    #I add -- to define optional arguments
-    #calling by --number1 2 --number2 5 --operation add
+    #if I want to make required argument, I have to add: required=True 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--number1",help="first number")
-    parser.add_argument("--number2",help="second number")
-    parser.add_argument("--operation",help="operation", choices=["add","subtract","multiply"])
-
+    parser.add_argument("--number1","--a", help="first number",required=True)
+    parser.add_argument("--number2","--b", help="second number",required=True)
+    parser.add_argument("--operation","--o", help="operation", choices=["add","subtract","multiply"],required=True)
+    
+    
     args = parser.parse_args()
     print(args)
     print(args.number1)

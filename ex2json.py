@@ -16,7 +16,6 @@ Dopisz wczytywanie tablicy z pliku json"""
 #    if num < 5:
 #        new.append(num)
 #print(new)
-
 import json
 book={}
 book['tom']={
@@ -31,18 +30,19 @@ book['bob']={
         'phone':'19283465'
 }
 s=json.dumps(book)
-with open("C:/Users/Anna/Desktop/book.txt","w") as f:
+with open("book.txt","w") as f:
     f.write(s)
 
 #print(s)
     #mamy string
-f=open("C:/Users/Anna/Desktop/book.txt","r")
-ss=f.read()
-print(ss)
- 
-#dostajemy dictionary
-book2=json.loads(ss)
-typ=type(book2)   
+with open("book.txt","r") as f:
+#ss=f.read()
+#print(ss)
+# 
+##dostajemy dictionary
+#book2=json.load(ss)
+    book3=json.load(f)
+typ=type(book3)   
 print(typ)
 print(book['bob'])
 print(book['bob']['phone'])
