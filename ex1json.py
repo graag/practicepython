@@ -23,9 +23,9 @@ import argparse
 def Main():
     #if I want to make required argument, I have to add: required=True 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--number1","--a", help="first number",required=True)
-    parser.add_argument("--number2","--b", help="second number",required=True)
-    parser.add_argument("--operation","--o", help="operation", choices=["add","subtract","multiply"],required=True)
+    parser.add_argument("--number1","-a", help="first number",required=True)
+    parser.add_argument("--number2","-b", help="second number",required=True)
+    parser.add_argument("--operation","-o", help="operation", choices=["add","subtract","multiply"],required=True)
     
     
     args = parser.parse_args()

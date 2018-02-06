@@ -20,12 +20,19 @@ if __name__=="__main__":
     score = 0
 
     while playing:
-        guess = list(input("Give me your best guess! The digits must be all different. If the matching digits are in their right positions, they are bulls, if in different positions, they are cows."))
+        guess = list(input("Give me your best guess! The digits must be all different. If the matching digits are in their right positions, they are bulls, if in different positions, they are cows.\n"))
         guess = [int(i) for i in guess]
+        guess=set(guess)
+        guess=list(guess)
+        if len(guess)!=4:
+            guess = list(input("You didnt put unique values. Try one more time and remember the digits must be all different. If the matching digits are in their right positions, they are bulls, if in different positions, they are cows.\n"))
+        else:
+            continue
+        
         if guess == "exit":
             break
         else:
-            guess=list(guess)
+            #guess=list(guess)
             cowbullcount = compare(lottery,guess)
             score+=1
                         
